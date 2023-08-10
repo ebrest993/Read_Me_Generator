@@ -5,36 +5,76 @@ const fs = require('fs');
 // TODO: Create an array of questions for user input
 const questions = () => inquirer.prompt ([
     {
-        name: 'test',
+        name: 'TITLE',
+        type: 'input',
+        message: 'What is the title of this project?'
+    
+    },
+    {
+        name: 'DESCRIPTION',
+        type: 'input',
+        message: 'Write a short paragraph describing your project.'
+    },        
+    {
+        name: 'INSTALLATION',
+        type: 'input',
+        message: 'Any tips or tricks for installation?'
+    },        
+    {
+        name: 'USAGE',
+        type: 'input',
+        message: 'Any tricks or tips involving general usage of this application.'
+    },        
+    {
+        name: 'LICENSE',
+        type: '',
+        message: ''
+    },        
+    {
+        name: 'CONTRIBUTING',
+        type: 'input',
+        message: 'What is your quest?'
+    },        
+    {
+        name: 'TESTS',
+        type: 'input',
+        message: 'Please provide troubleshooting instructions in case of performance issues:'
+    },        
+    {
+        name: 'QUESTIONS',
         type: 'input',
         message: [
-            'What is your name?',
-            'What is your quest?',
-            'What is your favorite color?'
+            'What is your GitHub username?',
+            'What is your email?'
         ]
-    }        
+    },        
 ]);
 
 questions().then((answers) => {
     console.log(answers);
-
 })
+// writeToFile(fileName, data);
 
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    console.log(fileName, data);
+    return `##IS THIS THING ON?
+    
+    This section is a test of displaying to a readme`;
+}
 
-// // TODO: Create a function to initialize app
-// function init() {
-// }
+// TODO: Create a function to initialize app
+function init() {
+}
 
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();
 
 
 
 
 // TITLE -- 'What is the title of this project?'
-// DESCRITION -- 'Write a short paragraph describing your project.'
+// DESCRIPTION -- 'Write a short paragraph describing your project.'
 // TABLE OF CONTENTS -- ((will be whatever sections end up included and a link to them))
 // INSTALLATION -- 'Any tips or tricks for installation?'
 // USAGE -- 'Any tricks or tips involving general usage of this application.'
