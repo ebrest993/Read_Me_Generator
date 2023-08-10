@@ -29,3 +29,21 @@ questions().then((answers) => {
 
 // // Function call to initialize app
 // init();
+
+
+
+
+// TITLE -- 'What is the title of this project?'
+// DESCRITION -- 'Write a short paragraph describing your project.'
+// TABLE OF CONTENTS -- ((will be whatever sections end up included and a link to them))
+// INSTALLATION -- 'Any tips or tricks for installation?'
+// USAGE -- 'Any tricks or tips involving general usage of this application.'
+// LICENSE -- ((list of options)), ((add a badge to display license in readme))
+// CONTRIBUTING -- ((is this telling people how they can contribute to the site as a whole if they want to?))
+// TESTS -- 'Please provide troubleshooting instructions in case of performance issues:'
+// QUESTIONS -- 'What is your GitHub username?', 'What is your email?'
+
+
+// NOTES:
+//     - If the user answers no to a question or skips it, don't include it or the section heading
+//     - Spontaneously create a readme file (like we did in the miniproject with the html)
