@@ -1,7 +1,15 @@
 // Packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-
+const octokit = require('octokit');
+// const octokit = new Octokit({
+//     auth: 'YOUR-TOKEN'
+//   })
+//   await octokit.request('GET /licenses', {
+//     headers: {
+//       'X-GitHub-Api-Version': '2022-11-28'
+//     }
+//   })
 
 // An array of questions for user input
 const init = () => inquirer.prompt (
@@ -32,9 +40,7 @@ const init = () => inquirer.prompt (
         type: 'list',
         message: 'What license are you using?',
         choices: [
-            'a',
-            'b',
-            'c'
+            octokit
         ]
     },        
     {
