@@ -1,9 +1,11 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// TODO: Create an array of questions for user input
-const questions = () => inquirer.prompt ([
+
+// An array of questions for user input
+const init = () => inquirer.prompt (
+    [
     {
         name: 'title',
         type: 'input',
@@ -27,8 +29,13 @@ const questions = () => inquirer.prompt ([
     },        
     {
         name: 'license',
-        type: '',
-        message: ''
+        type: 'list',
+        message: 'What license are you using?',
+        choices: [
+            'a',
+            'b',
+            'c'
+        ]
     },        
     {
         name: 'contributing',
@@ -52,7 +59,7 @@ const questions = () => inquirer.prompt ([
     },        
 ])
 
-questions()
+init()
     .then((answers) => {
         const readMeContent = generateReadMe(answers)
         fs.writeFileSync('README.md', readMeContent)
@@ -62,32 +69,21 @@ questions()
     )
     .catch(err => console.log(err));
 
-// writeToFile(fileName, data);
+// Writes the README file
+const generateReadMe = ({ title, description, installation, usage, license, contributing, test, questions1, questions2}) => 
+    {
+    return `## ${title} ##
 
-// TODO: Create a function to write README file
-const generateReadMe = (
-    { title, 
-    description, 
-    installation, 
-    usage, 
-    license, 
-    contributing, 
-    test, 
-    questions1, 
-    questions2 
-}) => {
-    return `${title} is the title of this project, but ${description} comes next follwed by all the other things.`;
-    console.log('got this far');
+is the title of this project.
+    
+# Description #
+
+${description} blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+    
+# Installation #
+
+${installation}`;
     }
-
-
-    // TODO: Create a function to initialize app
-    // function init() {
-        // }
-        
-        // // Function call to initialize app
-        // init();
-
 
 
 
