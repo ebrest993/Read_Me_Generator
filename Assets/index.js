@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
 const fs = require('fs');
+const inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
 const questions = () => inquirer.prompt ([
@@ -50,12 +50,17 @@ const questions = () => inquirer.prompt ([
         type: 'input',
         message: 'What is your email?'
     },        
-]);
+])
 
-questions().then((answers) => {
-    console.log();
-    generateReadMe(answers)
-})
+questions()
+    .then((answers) => {
+        const readMeContent = generateReadMe(answers)
+        fs.writeFileSync('README.md', readMeContent)
+    })
+    .then (() => 
+        console.log('Hey look, you did it!')
+    )
+    .catch(err => console.log(err));
 
 // writeToFile(fileName, data);
 
@@ -70,12 +75,12 @@ const generateReadMe = (
     test, 
     questions1, 
     questions2 
-}) =>
-    {return `#${title}`;}
-// function writeToFile(filename, data) {
-    //     // console.log(answers);
-    // }
-    
+}) => {
+    return `${title} is the title of this project, but ${description} comes next follwed by all the other things.`;
+    console.log('got this far');
+    }
+
+
     // TODO: Create a function to initialize app
     // function init() {
         // }
