@@ -5,70 +5,83 @@ const fs = require('fs');
 // TODO: Create an array of questions for user input
 const questions = () => inquirer.prompt ([
     {
-        name: 'TITLE',
+        name: 'title',
         type: 'input',
         message: 'What is the title of this project?'
-    
+        
     },
     {
-        name: 'DESCRIPTION',
+        name: 'description',
         type: 'input',
         message: 'Write a short paragraph describing your project.'
     },        
     {
-        name: 'INSTALLATION',
+        name: 'installation',
         type: 'input',
         message: 'Any tips or tricks for installation?'
     },        
     {
-        name: 'USAGE',
+        name: 'usage',
         type: 'input',
         message: 'Any tricks or tips involving general usage of this application.'
     },        
     {
-        name: 'LICENSE',
+        name: 'license',
         type: '',
         message: ''
     },        
     {
-        name: 'CONTRIBUTING',
+        name: 'contributing',
         type: 'input',
-        message: 'What is your quest?'
+        message: 'What is your contribution section (dont forget to ask what this is)?'
     },        
     {
-        name: 'TESTS',
+        name: 'tests',
         type: 'input',
         message: 'Please provide troubleshooting instructions in case of performance issues:'
     },        
     {
-        name: 'QUESTIONS',
+        name: 'questions1',
         type: 'input',
-        message: [
-            'What is your GitHub username?',
-            'What is your email?'
-        ]
+        message: 'What is your GitHub username?'
+    },
+    {
+        name: 'questions2',
+        type: 'input',
+        message: 'What is your email?'
     },        
 ]);
 
 questions().then((answers) => {
-    console.log(answers);
+    console.log();
+    generateReadMe(answers)
 })
+
 // writeToFile(fileName, data);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    console.log(fileName, data);
-    return `##IS THIS THING ON?
+const generateReadMe = (
+    { title, 
+    description, 
+    installation, 
+    usage, 
+    license, 
+    contributing, 
+    test, 
+    questions1, 
+    questions2 
+}) =>
+    {return `#${title}`;}
+// function writeToFile(filename, data) {
+    //     // console.log(answers);
+    // }
     
-    This section is a test of displaying to a readme`;
-}
-
-// TODO: Create a function to initialize app
-function init() {
-}
-
-// Function call to initialize app
-init();
+    // TODO: Create a function to initialize app
+    // function init() {
+        // }
+        
+        // // Function call to initialize app
+        // init();
 
 
 
