@@ -1,15 +1,23 @@
 // Packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const octokit = require('octokit');
-// const octokit = new Octokit({
-//     auth: 'YOUR-TOKEN'
-//   })
-//   await octokit.request('GET /licenses', {
-//     headers: {
-//       'X-GitHub-Api-Version': '2022-11-28'
-//     }
-//   })
+// const APIKey = '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';
+
+// const {octokit, App} = require('octokit');
+
+// import { octokit, App } from 'octokit';
+
+// const test = new octokit({
+//     auth: APIKey
+// })
+
+// terst.request('GET /licenses', {
+    //     headers: {
+        //         'X-GitHub-Api-Version': '2022-11-28'
+        //     }
+        //   })
+        
+        // new.octokit({ });
 
 // An array of questions for user input
 const init = () => inquirer.prompt (
@@ -40,7 +48,13 @@ const init = () => inquirer.prompt (
         type: 'list',
         message: 'What license are you using?',
         choices: [
-            octokit
+            'MIT',
+            'Apache',
+            'BSD 3-Clause',
+            'GPLv2',
+            'GPLv3',
+            'None',
+            'Other',
         ]
     },        
     {
