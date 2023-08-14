@@ -31,17 +31,17 @@ const init = () => inquirer.prompt (
     {
         name: 'description',
         type: 'input',
-        message: 'Write a short paragraph describing your project.'
+        message: 'Write (or paste) a short paragraph describing your project.'
     },        
     {
         name: 'installation',
         type: 'input',
-        message: 'Any tips or tricks for installation?'
+        message: 'Write (or paste) any tips or tricks for installation?'
     },        
     {
         name: 'usage',
         type: 'input',
-        message: 'Any tricks or tips involving general usage of this application.'
+        message: 'Any tricks or tips involving general usage of this application?'
     },        
     {
         name: 'license',
@@ -58,9 +58,9 @@ const init = () => inquirer.prompt (
         ]
     },        
     {
-        name: 'contributing',
+        name: 'repolink',
         type: 'input',
-        message: 'What is your contribution section (dont forget to ask what this is)?'
+        message: 'Please provide the link to your repository:'
     },        
     {
         name: 'tests',
@@ -70,39 +70,72 @@ const init = () => inquirer.prompt (
     {
         name: 'questions1',
         type: 'input',
-        message: 'What is your GitHub username?'
+        message: 'What is your email?'
     },
     {
         name: 'questions2',
         type: 'input',
-        message: 'What is your email?'
+        message: 'What is your GitHub username?'
     },        
 ])
 
 init()
-    .then((answers) => {
-        const readMeContent = generateReadMe(answers)
-        fs.writeFileSync('README.md', readMeContent)
-    })
-    .then (() => 
-        console.log('Hey look, you did it!')
-    )
-    .catch(err => console.log(err));
+.then((answers) => {
+    const readMeContent = generateReadMe(answers)
+    fs.writeFileSync('README.md', readMeContent)
+})
+.then (() => 
+console.log('Hey look, you did it!')
+)
+.catch(err => console.log(err));
 
 // Writes the README file
-const generateReadMe = ({ title, description, installation, usage, license, contributing, test, questions1, questions2}) => 
-    {
+const generateReadMe = ({ title, description, installation, usage, license, repolink, test, questions1, questions2}) => 
+{
     return `## ${title} ##
 
-is the title of this project.
     
-# Description #
+## Description ##
+    
+${description}
 
-${description} blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
-    
+################################################################
+
 # Installation #
 
-${installation}`;
+${installation}
+
+################################################################
+
+# Usage #
+
+${usage}
+
+################################################################
+
+# Licensing #
+
+This project is licensed under the ${license} License.
+
+################################################################
+
+# Contributing # 
+
+If developers wish to request access for contribution, the repository can be found at this link: ${repolink}
+
+################################################################
+
+# Test #
+
+${test}
+
+################################################################
+
+# Contact #
+
+For any questions or to contact the developer directly:
+email: [${questions1}]
+GitHub: [${questions2}]`;
     }
 
 
