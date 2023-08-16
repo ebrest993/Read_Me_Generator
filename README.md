@@ -1,48 +1,48 @@
-# www.facebook.com #
-
+# elliott.brest@gmail.com #
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents ##
-1. [Description](https://github.com/ebrest993/Read_Me_Generator#description)
-2. [Installation](https://github.com/ebrest993/Read_Me_Generator#installation)
-3. [Usage](https://github.com/ebrest993/Read_Me_Generator#usage)
-4. [Licensing](https://github.com/ebrest993/Read_Me_Generator#licensing)
-5. [Contributing](https://github.com/ebrest993/Read_Me_Generator#contributing)
-6. [Test](https://github.com/ebrest993/Read_Me_Generator#test)
-7. [Contact](https://github.com/ebrest993/Read_Me_Generator#contact)
+1. [Description](./README.md#description)
+2. [Installation](./README.md#installation)
+3. [Usage](./README.md#usage)
+4. [Licensing](./README.md#licensing)
+5. [Contributing](./README.md#contributing)
+6. [Test](./README.md#test)
+7. [Contact](./README.md#contact)
 
 ## Description ###
     
-www.facebook.com
+elliott.brest@gmail.com
     
 ##############
 
 ## Installation ###
 
-www.facebook.com
+elliott.brest@gmail.com
 
 #############
 
 ## Usage ###
 
-www.facebook.com
+elliott.brest@gmail.com
 
 #############
 
 ## Licensing ###
 
-This project is licensed under the Other License.
+This project is licensed under the MIT License.
 
 #############
 
 ## Contributing ### 
 
-If developers wish to request access for contribution, the repository can be found at this link: [GitHub Repo](https://www.facebook.com)
+If developers wish to request access for contribution, the repository can be found at this link: elliott.brest@gmail.com
 
 ##############
 
 ## Test ###
 
-www.facebook.com
+elliott.brest@gmail.com
 
 ##############
 
@@ -50,6 +50,6 @@ www.facebook.com
 
 For any questions or to contact the developer directly:
 
-email: [www.facebook.com]
+email: (elliott.brest@gmail.com)
 
-GitHub: [www.facebook.com]
+GitHub: elliott.brest@gmail.com

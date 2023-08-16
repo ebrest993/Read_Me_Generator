@@ -9,13 +9,13 @@ const generateReadMe = ({title, description, installation, usage, license, repol
 ${yourBadge}
 
 ## Table of Contents ##
-1. [Description](https://github.com/ebrest993/Read_Me_Generator#description)
-2. [Installation](https://github.com/ebrest993/Read_Me_Generator#installation)
-3. [Usage](https://github.com/ebrest993/Read_Me_Generator#usage)
-4. [Licensing](https://github.com/ebrest993/Read_Me_Generator#licensing)
-5. [Contributing](https://github.com/ebrest993/Read_Me_Generator#contributing)
-6. [Test](https://github.com/ebrest993/Read_Me_Generator#test)
-7. [Contact](https://github.com/ebrest993/Read_Me_Generator#contact)
+1. [Description](./README.md#description)
+2. [Installation](./README.md#installation)
+3. [Usage](./README.md#usage)
+4. [Licensing](./README.md#licensing)
+5. [Contributing](./README.md#contributing)
+6. [Test](./README.md#test)
+7. [Contact](./README.md#contact)
 
 ## Description ###
     
@@ -43,7 +43,7 @@ This project is licensed under the ${license} License.
 
 ## Contributing ### 
 
-If developers wish to request access for contribution, the repository can be found at this link: [GitHub Repo](${repolink})
+If developers wish to request access for contribution, the repository can be found at this link: ${repolink}
 
 ##############
 
@@ -57,9 +57,9 @@ ${tests}
 
 For any questions or to contact the developer directly:
 
-email: [${questions1}]
+email: ${questions1}
 
-GitHub: [${questions2}]`;
+GitHub: ${questions2}`;
 }
 
 const init = () => inquirer.prompt ([
